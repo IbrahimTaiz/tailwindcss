@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Al-Khwarizmi Trading</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <nav class="bg-white shadow p-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Al-Khwarizmi Trading</h1>
+        <ul class="flex space-x-4">
+            <li><a href="#" class="hover:text-blue-500">Home</a></li>
+            <li><a href="#" class="hover:text-blue-500">Products</a></li>
+            <li><a href="mailto:dkh.alamri@gmail.com" class="hover:text-blue-500">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="bg-blue-600 text-white text-center py-20">
+        <h2 class="text-4xl font-bold mb-4">تسوق أفضل المنتجات</h2>
+        <p class="text-lg">تظهر تقيممات المنتجات تحت كل منتج.</p>
+    </section>
+
+    <section class="relative px-4 py-10">
+        <div class="overflow-hidden relative">
+            <div id="product-slider" class="flex transition-all duration-500 space-x-4">
+                <!-- Product cards will be injected here -->
+            </div>
+            <!-- Arrows -->
+            <button id="prevBtn" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white shadow p-2 rounded-full">❮</button>
+            <button id="nextBtn" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white shadow p-2 rounded-full">❯</button>
+        </div>
+    </section>
+
+    <footer class="bg-white text-center py-6 mt-10 shadow-inner">
+        <p>&copy;Al-Khwarizmi Trading 2025</p>
+    </footer>
+
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg w-11/12 md:w-1/2 p-6 relative">
+            <button id="closeModal" class="absolute top-2 right-2 text-xl">×</button>
+            <img id="modal-image" class="w-full mb-4 rounded" />
+            <h2 id="modal-name" class="text-2xl font-bold"></h2>
+            <p id="modal-company" class="text-sm text-gray-500 mb-2"></p>
+            <p id="modal-description" class="mb-2"></p>
+            <p id="modal-price" class="text-lg font-semibold mb-2"></p>
+            <p id="modal-coupon" class="text-green-600 mb-4"></p>
+            <div id="modal-stars" class="flex space-x-1 cursor-pointer"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
