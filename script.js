@@ -49,16 +49,13 @@ const products = [
     coupon: '15%',
     rating: 5
   },
- 
-  // Add more products as needed
-];
+   ];
 
 const slider = document.getElementById('product-slider');
 const modal = document.getElementById('modal');
 const closeModal = document.getElementById('closeModal');
 let sliderIndex = 0;
 
-// Populate product cards
 function renderProducts() {
   slider.innerHTML = '';
   products.forEach((product, index) => {
@@ -77,7 +74,6 @@ function renderProducts() {
   });
 }
 
-// Generate star HTML
 function generateStars(rating) {
   let starsHTML = '';
   for (let i = 1; i <= 5; i++) {
@@ -86,7 +82,6 @@ function generateStars(rating) {
   return starsHTML;
 }
 
-// Modal Logic
 function openModal(product, index) {
   modal.classList.remove('hidden');
   document.getElementById('modal-image').src = product.image;
@@ -110,7 +105,6 @@ function openModal(product, index) {
 
 closeModal.onclick = () => modal.classList.add('hidden');
 
-// Slider functionality
 let autoSlide = setInterval(() => moveSlide(1), 4000);
 
 function moveSlide(direction) {
@@ -128,3 +122,4 @@ document.getElementById('prevBtn').onclick = () => moveSlide(-1);
 
 // Initial Render
 renderProducts();
+
